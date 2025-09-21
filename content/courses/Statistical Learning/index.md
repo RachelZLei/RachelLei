@@ -5,7 +5,7 @@ tags: ["Machine Learning","Statistical Learning","Regression","Classification","
 author: ["Rachel Lei"]
 description: "This Statistical Learning course discusses basic machine learning methods" 
 cover:
-    image: "Statistical Learning.jpg"
+    image: "Statistical_Learning.jpg"
     alt: "Figure caption"
     relative: true
 showToc: true
