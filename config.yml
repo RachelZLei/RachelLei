@@ -26,7 +26,7 @@ menu:
           weight: 3
 
         - name: CV
-          url: /RachelLei/cv.pdf
+          url: static/cv.pdf
           weight: 4
 
 params:
