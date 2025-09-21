@@ -2,7 +2,10 @@
 title: "Summer School in Jyväskylä 🇫🇮: Machine Learning, Stochastic Control, and Multi-Objective Optimization"
 date: 2025-08-16
 tags: ["summer school", "machine learning", "stochastic control", "optimization"]
-featured_image: "JYU.JPG"
+cover:
+  image: "JYU.JPG"   # 与本文件同目录的图片
+  alt: "JYU cover"
+  relative: true
 
 ---
 
@@ -19,7 +22,7 @@ This experience deepened my interest in the applications of machine learning.
 
 ![Lecture slides on Stochastic Control](MA1.png)
 
-[There is my lecture notes](ML&SC.pdf)
+[There is my lecture notes](ML_SC.pdf)
 
 [There is the lecture slides](https://users.jyu.fi/~geiss/workshops/ma1-2025/ma1.html)
 
