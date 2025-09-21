@@ -70,7 +70,7 @@ params:
       - name: Blog
         url: blog/
       - name: CV
-        url: /RachelLei/cv.pdf
+        url: static/cv.pdf
 
     socialIcons:
       - name: Email
