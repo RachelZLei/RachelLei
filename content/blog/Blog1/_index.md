@@ -19,7 +19,7 @@ This experience deepened my interest in the applications of machine learning.
 
 ![Lecture slides on Stochastic Control](MA1.png)
 
-[There is my lecture notes](content/blog/Blog1/ML&SC.pdf)
+[There is my lecture notes](ML&SC.pdf)
 
 [There is the lecture slides](https://users.jyu.fi/~geiss/workshops/ma1-2025/ma1.html)
 
