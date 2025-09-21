@@ -29,7 +29,7 @@ Focus: probability, mathematical statistics, estimation, hypothesis testing, asy
 - [Textbook](ptstextbook.pdf)
 
 ---
-## PTS1 — Probability Theory
+## PTS1 - Probability Theory
 
 **My notes**
 - [Probability Theory cheatsheet (distribution)](clips1.pdf)
@@ -47,7 +47,7 @@ Focus: probability, mathematical statistics, estimation, hypothesis testing, asy
 - Distribution transformations: from one random variable to another, and vice versa  
 
 ---
-## PTS2 — Multivariate Distribution and Estimations
+## PTS2 - Multivariate Distribution and Estimations
 
 **My notes**
 - [chapter 5 Multivariate Distribution](5_multivariate_distribution.pdf)
