@@ -57,7 +57,7 @@ params:
     profileMode:
           enabled: true
           title: Zhiyao(Rachel) Lei
-          subtitle: "I'm currently a third-year BSc student in Econometrics and Data Science at Universiteit van Amsterdam, with a solid background in statistics and programming (Python, R, and Stata). While I've covered the fundamentals, my true passion lies in machine learning and computational algorithms. I'm keen to explore data science research roles that involve both theoretical inquiry and practical application."
+          subtitle: "I'm currently a third-year BSc student in Econometrics and Data Science at Universiteit van Amsterdam, with a solid background in statistics and programming (Python, R, and Stata). While I've covered the fundamentals, my true passion lies in machine learning and computational algorithms. I’m interested in data science research in both academic and industry settings."
           imageUrl: "picture.JPG"
           imageWidth: 160
           imageHeight: 160
