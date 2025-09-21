@@ -30,47 +30,48 @@ menu:
           weight: 4
 
 params:
-    hideFooter: true
-    description: "Personal website of Rachel Lei — projects, courses, and notes in Data Science & ML."
-    author: Rachel Lei
-    # googleAnalyticsID: "G-XXXXX"
-    DateFormat: "January 2006"
-    defaultTheme: light
-    hideFooter: false
-    disableThemeToggle: true
-    ShowShareButtons: false
-    ShowReadingTime: false
-    disableSpecial1stPost: true
-    disableAnchoredHeadings: true
-    ShowPostNavLinks: false
-    ShowBreadCrumbs: false
-    ShowCodeCopyButtons: true
-    ShowAllPagesInArchive: false
-    MainSections: ["projects","blog","courses"]
-    ShowToc: false
-    disableScrollToTop: true
-    TocOpen: true
-    ShowWordCount: false
-    UseHugoToc: true
-    comments: false
-    math: true
-    profileMode:
-          enabled: true
-          title: Zhiyao(Rachel) Lei
-          subtitle: "I'm currently a third-year BSc student in Econometrics and Data Science at Universiteit van Amsterdam, with a solid background in statistics and programming (Python, R, and Stata). While I've covered the fundamentals, my true passion lies in machine learning and computational algorithms. I’m interested in data science research in both academic and industry settings."
-          imageUrl: "picture.JPG"
-          imageWidth: 160
-          imageHeight: 160
-          buttons:
-            - name: Courses
-              url: courses/
-            - name: Projects
-              url: projects/
-            - name: Blog
-              url: blog/
-            - name: CV
-              url: /cv.pdf
- 
+  hideFooter: true            # 或 false，看你是否显示页脚
+  description: "Personal website of Rachel Lei — projects, courses, and notes in Data Science & ML."
+  author: Rachel Lei
+  # googleAnalyticsID: "G-XXXXX"
+  DateFormat: "January 2006"
+  defaultTheme: light
+  disableThemeToggle: false   # 想隐藏切换按钮就改回 true
+  ShowShareButtons: false
+  ShowReadingTime: false
+  disableSpecial1stPost: true
+  disableAnchoredHeadings: true
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowPageCards: true
+  ShowAllPagesInArchive: false
+  MainSections: ["projects","blog","courses"]
+  ShowToc: false
+  disableScrollToTop: true
+  TocOpen: true
+  ShowWordCount: false
+  UseHugoToc: true
+  comments: false
+  math: true
+
+  profileMode:
+    enabled: true
+    title: Zhiyao (Rachel) Lei
+    subtitle: "I'm currently a third-year BSc student in Econometrics and Data Science at Universiteit van Amsterdam, with a solid background in statistics and programming (Python, R, and Stata). While I've covered the fundamentals, my true passion lies in machine learning and computational algorithms. I’m interested in data science research in both academic and industry settings."
+    imageUrl: "picture.JPG"
+    imageWidth: 160
+    imageHeight: 160
+    buttons:
+      - name: Courses
+        url: courses/
+      - name: Projects
+        url: projects/
+      - name: Blog
+        url: blog/
+      - name: CV
+        url: /RachelLei/cv.pdf
+
     socialIcons:
       - name: Email
         url: "mailto:leizhiyao2005@gmail.com"
