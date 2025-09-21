@@ -32,7 +32,7 @@ Focus: probability, mathematical statistics, estimation, hypothesis testing, asy
 ## PTS1 — Probability Theory
 
 **My notes**
-- [Probability cheatsheet (measure basics, convergence)] (pts1clips.pdf)
+- [Probability cheatsheet (measure basics, convergence)] ([clips1.pdf](clips1.pdf))
 
 **Reader**
 - [Reader (probability foundations)](Readerpts1.pdf)
