@@ -37,7 +37,7 @@ I then joined a course taught by the **Optimization Group at JYU**, focusing on:
 
 This was challenging but very rewarding, giving me practical exposure to interactive optimization methods.  
 
-[There is the lecture slides](/Op/)
+[There is the lecture slides](/Op/#)
 
 ### Beyond the Classroom  
 Outside of class, I:  
