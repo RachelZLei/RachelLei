@@ -13,25 +13,25 @@ taxonomies:
 
 menu:
     main:
-        - name: Books
-          url: books/
-          weight: 5 
-        - name: Papers
-          url: papers/
-          weight: 2
         - name: Courses
           url: courses/
-          weight: 3
-        - name: Data
-          url: data/
-          weight: 4 
+          weight: 1
+
+        - name: Projects
+          url: projects/
+          weight: 2
+
         - name: Blog
-          url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-          weight: 6
+          url: blog/
+          weight: 3
+
+        - name: CV
+          url: /cv.pdf
+          weight: 4
 
 params:
-    description: "This website hosts Moritz-Maria von Igelfeld's research papers, books, course materials, data, curriculum vitae, and contact information."
-    author: Moritz-Maria von Igelfeld
+    description: "Personal website of Rachel Lei — projects, courses, and notes in Data Science & ML."
+    author: Rachel Lei
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
     defaultTheme: light
@@ -45,7 +45,7 @@ params:
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["books","courses","papers","data"]
+    MainSections: ["projects","blog","courses"]
     ShowToc: false
     disableScrollToTop: true
     TocOpen: true
@@ -56,49 +56,29 @@ params:
     profileMode:
           enabled: true
           title: Professor Dr von Igelfeld
-          subtitle: "I am a Professor in the Institute of Romance Philology at the University of Regensburg, Germany. My research focuses on Portuguese irregular verbs. I was a doctoral student of Professor Dr Dieter Vogelsang in Munich, and later a second assistant of Professor Walter Schoeffler-Henschell at the University of Wiesbaden."
-          imageUrl: "picture.jpeg"
+          subtitle: "I'm currently a third-year BSc student in Econometrics and Data Science at Universiteit van Amsterdam, with a solid background in statistics and programming (Python, R, and Stata). While I've covered the fundamentals, my true passion lies in machine learning and computational algorithms. I'm keen to explore data science research roles that involve both theoretical inquiry and practical application."
+          imageUrl: "picture.JPG"
           imageWidth: 160
           imageHeight: 160
           buttons:
-            - name: Papers
-              url: papers/
-            - name: Data
-              url: data/
-            - name: Books
-              url: books/
             - name: Courses
               url: courses/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
+            - name: Projects
+              url: projects/
             - name: Blog
-              url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-
+              url: blog/
+            - name: CV
+              url: /cv.pdf
+ 
     socialIcons:
-        - name: CV
-          url: cv.pdf
-        - name: Email
-          url: mailto:igelfeld@regensburg.edu
-        - name: Zoom
-          url: https://www.zoom.us/my/igelfeld
-        - name: Location
-          url: location/
-        - name: Office Hours
-          url: officehours/
-        - name: Google Scholar
-          url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
-        - name: GitHub
-          url: https://github.com/pmichaillat
-        - name: Substack
-          url: https://pmichaillat.substack.com
-        - name: YouTube
-          url: https://www.youtube.com/@pmichaillat
-        - name: Twitter
-          url: https://x.com/pmichaillat
-        - name: Bluesky
-          url: https://bsky.app/profile/pmichaillat.bsky.social
+      - name: Email
+        url: "mailto:leizhiyao2005@gmail.com"
+      - name: GitHub
+        url: "https://github.com/RachelZLei"
+      - name: Kaggle
+        url: "https://www.kaggle.com/rachellei918"
+      - name: LinkedIn
+        url: "https://www.linkedin.com/in/zhiyao-lei-9a40b22b1/"
 
     assets:
         disableScrollBarStyle: true
@@ -106,7 +86,7 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Moritz-Maria von Igelfeld"
+      text: "Rachel Lei"
       icon: favicon.ico
       iconHeight: 18
 
