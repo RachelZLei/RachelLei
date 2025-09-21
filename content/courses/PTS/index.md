@@ -1,6 +1,7 @@
 ---
 title: "Probability Theory & Statistics (PTS)"
-date: 2023-11, 2024-11
+date: 2023-11-01
+lastmod: 2024-11-01
 author: "Rachel Lei"
 description: "My notes and materials for the PTS courses."
 summary: "My notes, cheat sheets, and selected readers/textbooks for PTS."
@@ -25,16 +26,16 @@ Focus: probability, mathematical statistics, estimation, hypothesis testing, asy
 ---
 ## Literature
 
-- [Textbook](pts3 engel bain.pdf)
+- [Textbook](ptstextbook.pdf)
 
 ---
 ## PTS1 — Probability Theory
 
 **My notes**
-- [Probability cheatsheet (measure basics, convergence)] (pts1 clips.pdf)
+- [Probability cheatsheet (measure basics, convergence)] (pts1-clips.pdf)
 
 **Reader**
-- [Reader (probability foundations)](Reader PTS1.pdf)
+- [Reader (probability foundations)](Readerpts1.pdf)
 
 **Topics**
 - Descriptive statistics: key techniques and summary measures  
