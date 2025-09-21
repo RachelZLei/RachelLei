@@ -26,10 +26,11 @@ menu:
           weight: 3
 
         - name: CV
-          url: /cv.pdf
+          url: cv.pdf
           weight: 4
 
 params:
+    hideFooter: true
     description: "Personal website of Rachel Lei — projects, courses, and notes in Data Science & ML."
     author: Rachel Lei
     # googleAnalyticsID: "G-XXXXX"
@@ -55,7 +56,7 @@ params:
     math: true
     profileMode:
           enabled: true
-          title: Professor Dr von Igelfeld
+          title: Zhiyao(Rachel) Lei
           subtitle: "I'm currently a third-year BSc student in Econometrics and Data Science at Universiteit van Amsterdam, with a solid background in statistics and programming (Python, R, and Stata). While I've covered the fundamentals, my true passion lies in machine learning and computational algorithms. I'm keen to explore data science research roles that involve both theoretical inquiry and practical application."
           imageUrl: "picture.JPG"
           imageWidth: 160
