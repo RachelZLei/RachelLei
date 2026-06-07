@@ -1,5 +1,5 @@
 ---
-title: "Summer School in Jyväskylä 🇫🇮: Machine Learning, Stochastic Control, and Multi-Objective Optimization"
+title: "Summer School in Jyväskylä: Machine Learning, Stochastic Control, and Multi-Objective Optimization"
 date: 2025-08-16
 tags: ["summer school", "machine learning", "stochastic control", "optimization"]
 cover:
@@ -9,7 +9,7 @@ cover:
 
 ---
 
-Two weeks at the summer school in Jyväskylä 🇫🇮 went by quickly.
+Two weeks at the summer school in Jyväskylä went by quickly.
 
 ### Week 1: Machine Learning & Stochastic Control  
 I took a course with **Prof. Huyên PHAM** on machine learning and stochastic control.  
@@ -22,9 +22,9 @@ This experience deepened my interest in the applications of machine learning.
 
 ![Lecture slides on Stochastic Control](MA1.png)
 
-[There is my lecture notes](ML_SC.pdf)
+[Selected notes on machine learning and stochastic control](ML_SC.pdf)
 
-[There is the lecture slides](https://users.jyu.fi/~geiss/workshops/ma1-2025/ma1.html)
+[Course materials](https://users.jyu.fi/~geiss/workshops/ma1-2025/ma1.html)
 
 
 
@@ -37,7 +37,7 @@ I then joined a course taught by the **Optimization Group at JYU**, focusing on:
 
 This was challenging but very rewarding, giving me practical exposure to interactive optimization methods.  
 
-[There is the lecture slides](/Op/#)
+[Lecture materials from the course](Op/)
 
 ### Beyond the Classroom  
 Outside of class, I:  
@@ -50,4 +50,3 @@ Outside of class, I:
 Most importantly, I met many new friends from around the world. Thanks to Mea, the social activity organizer, these two weeks were both academically and personally unforgettable.  
 
 ---
-

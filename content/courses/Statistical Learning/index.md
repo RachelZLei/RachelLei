@@ -1,9 +1,10 @@
 ---
-title: "Statisical Learning" 
+title: "Statistical Learning"
 date: 2025-01-01
+draft: true
 tags: ["Machine Learning","Statistical Learning","Regression","Classification","Python"]
 author: ["Rachel Lei"]
-description: "This Statistical Learning course discusses basic machine learning methods" 
+description: "Notes on foundational machine learning methods."
 cover:
     image: "Statistical_Learning.jpg"
     alt: "Figure caption"
@@ -12,4 +13,3 @@ showToc: true
 disableAnchoredHeadings: false
 
 ---
-

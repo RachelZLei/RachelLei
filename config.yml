@@ -1,6 +1,6 @@
 baseURL: "https://RachelZLei.github.io/RachelLei/"
 
-title: RachelLei
+title: Zhiyao (Rachel) Lei
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -13,30 +13,30 @@ taxonomies:
 
 menu:
     main:
-        - name: Courses
-          url: courses/
-          weight: 1
-
         - name: Projects
           url: projects/
+          weight: 1
+
+        - name: Writing
+          url: blog/
           weight: 2
 
-        - name: Blog
-          url: blog/
+        - name: GitHub
+          url: "https://github.com/RachelZLei"
           weight: 3
 
         - name: CV
-          url: /RachelLei/cv.pdf
+          url: cv.pdf
           weight: 4
 
 params:
-  hideFooter: true            # 或 false，看你是否显示页脚
-  description: "Personal website of Rachel Lei — projects, courses, and notes in Data Science & ML."
+  hideFooter: true
+  description: "Zhiyao (Rachel) Lei's portfolio in machine learning, statistics, and computational science."
   author: Rachel Lei
   # googleAnalyticsID: "G-XXXXX"
   DateFormat: "January 2006"
   defaultTheme: light
-  disableThemeToggle: false   # 想隐藏切换按钮就改回 true
+  disableThemeToggle: false
   ShowShareButtons: false
   ShowReadingTime: false
   disableSpecial1stPost: true
@@ -46,7 +46,7 @@ params:
   ShowCodeCopyButtons: true
   ShowPageCards: true
   ShowAllPagesInArchive: false
-  MainSections: ["projects","blog","courses"]
+  MainSections: ["projects","blog"]
   ShowToc: false
   disableScrollToTop: true
   TocOpen: true
@@ -55,32 +55,30 @@ params:
   comments: false
   math: true
 
+  socialIcons:
+    - name: Email
+      url: "mailto:leizhiyao2005@gmail.com"
+    - name: GitHub
+      url: "https://github.com/RachelZLei"
+    - name: Kaggle
+      url: "https://www.kaggle.com/rachellei918"
+    - name: LinkedIn
+      url: "https://www.linkedin.com/in/zhiyao-lei-9a40b22b1/"
+
   profileMode:
     enabled: true
     title: Zhiyao (Rachel) Lei
-    subtitle: "I'm currently a third-year BSc student in Econometrics and Data Science at Universiteit van Amsterdam, with a solid background in statistics and programming (Python, R, and Stata). While I've covered the fundamentals, my true passion lies in machine learning and computational algorithms. I’m interested in data science research in both academic and industry settings."
+    subtitle: "BSc student in Econometrics and Data Science at the University of Amsterdam. I am interested in machine learning, statistical modeling, and computational methods, with experience in Python, R, and Stata. I enjoy turning mathematical ideas into clear, reproducible experiments and am exploring research opportunities in academic and applied settings."
     imageUrl: "picture.JPG"
     imageWidth: 160
     imageHeight: 160
     buttons:
-      - name: Courses
-        url: courses/
       - name: Projects
         url: projects/
-      - name: Blog
+      - name: Writing
         url: blog/
       - name: CV
-        url: /RachelLei/cv.pdf
-
-    socialIcons:
-      - name: Email
-        url: "mailto:leizhiyao2005@gmail.com"
-      - name: GitHub
-        url: "https://github.com/RachelZLei"
-      - name: Kaggle
-        url: "https://www.kaggle.com/rachellei918"
-      - name: LinkedIn
-        url: "https://www.linkedin.com/in/zhiyao-lei-9a40b22b1/"
+        url: cv.pdf
 
     assets:
         disableScrollBarStyle: true

@@ -4,7 +4,7 @@ description: "Slides from the summer school courses at JYU: Multi-Objective Opti
 date: 2025-08-16
 ---
 
-Here are the slides from the five lectures I attended during the summer school at Jyväskylä 🇫🇮.
+Here are the slides from the five lectures I attended during the summer school at Jyväskylä.
 
 ### Multi-Objective Optimization
 - [Lecture 1: Basic Concepts](./day_1_slides.pdf)
