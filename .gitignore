@@ -1,4 +1,7 @@
-# Hugo build artifacts
-public/
-resources/
-.hugo_build.lock
+# LaTeX build artifacts
+**/.latex-out/
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc

@@ -1,0 +1,205 @@
+\documentclass[12pt,a4paper]{article}
+
+% ====== Packages ======
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+
+% ====== Colors Setup ======
+\definecolor{mainblue}{RGB}{41, 128, 185}
+\definecolor{maingreen}{RGB}{39, 174, 96}
+\definecolor{mainred}{RGB}{192, 57, 43}
+\definecolor{bgblue}{RGB}{235, 245, 251}
+\definecolor{bggreen}{RGB}{233, 247, 239}
+\definecolor{bgred}{RGB}{253, 237, 236}
+
+% ====== TColorBox Environments ======
+\newtcolorbox{defbox}[1][]{
+    colback=bgblue,
+    colframe=mainblue,
+    fonttitle=\bfseries,
+    boxrule=1pt,
+    arc=4pt,
+    enhanced,
+    drop shadow,
+    #1
+}
+
+\newtcolorbox{thmbox}[1][]{
+    colback=bggreen,
+    colframe=maingreen,
+    fonttitle=\bfseries,
+    boxrule=1pt,
+    arc=4pt,
+    enhanced,
+    drop shadow,
+    #1
+}
+
+\newtcolorbox{notebox}[1][]{
+    colback=bgred,
+    colframe=mainred,
+    fonttitle=\bfseries,
+    boxrule=1pt,
+    arc=4pt,
+    enhanced,
+    drop shadow,
+    #1
+}
+
+\title{\textbf{\color{mainblue} Mathematical Statistics Notes}}
+\author{Structured from Handwritten Notes}
+\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% ==========================================
+% Section 1: Limiting Distribution
+% ==========================================
+\section{Limiting Distribution}
+
+\subsection{Convergence Concepts}
+\begin{itemize}
+    \item \textbf{Limiting Distribution:} An important limit formula is
+    $\lim_{n\rightarrow\infty}(1+\frac{b}{n})^n=e^b$.
+    \item \textbf{Convergence in Probability:} $Y_n \xrightarrow{p} y$, which implies $\lim_{n\rightarrow\infty}P(|Y_n-y|<\epsilon)=1$. This is also referred to as stochastic convergence ($Y_n \xrightarrow{p} c$).
+    \item \textbf{Law of Large Numbers (LLN):} For sample mean $\bar{X}_n \xrightarrow{p} \mu$ given $E(X_i)=\mu$.
+\end{itemize}
+
+\begin{thmbox}[title=Properties of Convergence]
+Given $X_n \xrightarrow{p} c$ and $Y_n \xrightarrow{p} d$:
+\begin{itemize}
+    \item $aX_n + bY_n \xrightarrow{p} ac + bd$
+    \item $X_n Y_n \xrightarrow{p} cd$
+\end{itemize}
+\textbf{Slutsky's Theorem:} Given $X_n \xrightarrow{p} c$ and $Y_n \xrightarrow{d} Y$:
+\begin{itemize}
+    \item $X_n + Y_n \xrightarrow{d} c + Y$
+    \item $X_n Y_n \xrightarrow{d} cY$
+    \item $\frac{Y_n}{X_n} \xrightarrow{d} \frac{Y}{c}$ for $c \ne 0$
+\end{itemize}
+\end{thmbox}
+
+\subsection{Asymptotic Convergence \& Central Limit Theorem}
+\begin{itemize}
+    \item \textbf{Asymptotic Convergence:} If
+    $\frac{Y_n-\mu}{c/\sqrt{n}} \xrightarrow{d} Z \sim N(0,1)$, then
+    $Y_n \xrightarrow{p} \mu$. Equivalently, for large $n$,
+    $Y_n$ is approximately distributed as $N(\mu,c^2/n)$.
+    \item \textbf{Central Limit Theorem (CLT):} $Z_n = \frac{\sum x_i - n\mu}{\sqrt{n}\sigma} = \sqrt{n}\frac{\bar{x}_n - \mu}{\sigma} \xrightarrow{d} N(0,1)$.
+    \item \textbf{Order Statistics:} The limiting distribution of central order statistics $X_{k:n}$ is asymptotically normal with mean $x_p$ given $\frac{k}{n} \rightarrow p$.
+    \item \textbf{Transformation Method:} For $Y=g(X)$, the PDF is $f_Y(y)=f_X(x)|\frac{dx}{dy}|$ where $x=g^{-1}(y)$.
+\end{itemize}
+
+
+% ==========================================
+% Section 2: Point Estimation
+% ==========================================
+\section{Point Estimation}
+
+\subsection{Methods of Estimation}
+\begin{itemize}
+    \item \textbf{Method of Moments Estimator (MME):} The $j$-th moment is $\mu_j'(\theta) = E[X^j]$. We use the sample moments $M_j' = \frac{1}{n}\sum_{i=1}^n (X_i)^j$ to estimate. For example, $M_1' = \bar{X}_n$.
+    \item \textbf{Maximum Likelihood Estimator (MLE):} The likelihood function is $L(\theta) = \prod_{i=1}^n f(x_i;\theta)$. The MLE $\hat{\theta}$ satisfies $L(\hat{\theta}) = \max_{\theta\in\Omega}f(x_1...x_n;\theta)$.
+    \item \textbf{Invariance Property:} If $\hat{\theta}$ is the MLE of $\theta$ and $\tau(\theta)$ is a function of $\theta$, then $\tau(\hat{\theta})$ is the MLE of $\tau(\theta)$.
+\end{itemize}
+
+\subsection{Criteria for Estimators}
+\begin{defbox}[title=Estimator Properties]
+\begin{itemize}
+    \item \textbf{Unbiased Estimator:} $E[T] = \tau(\theta)$ for all $\theta \in \Omega$.
+    \item \textbf{UMVUE:} $T^*$ is a Uniformly Minimum Variance Unbiased Estimator if for any other unbiased estimator $T$, $Var[T^*] \le Var[T]$.
+\end{itemize}
+\end{defbox}
+
+\begin{itemize}
+    \item \textbf{Cramer-Rao Lower Bound (CRLB):} The variance of an unbiased estimator $T$ is bounded by $Var[T] \ge \frac{(\tau'(\theta))^2}{nE[(\frac{\partial}{\partial\theta}\log f(X;\theta))^2]}$.
+    \item \textbf{Efficiency:} Relative efficiency is $re(T,T^*) = \frac{Var(T^*)}{Var(T)}$.
+    \item \textbf{Mean Squared Error (MSE):} $MSE(T) = E(T-\tau(\theta))^2 = Var(T) + (b(T))^2$ where $b(T)$ is the bias.
+\end{itemize}
+
+\subsection{Large-Sample Properties}
+\begin{itemize}
+    \item \textbf{Simple Consistency:} $\lim_{n\rightarrow\infty}P[|T_n-\tau(\theta)|\le\epsilon]=1$, denoted $T_n \xrightarrow{p} \tau(\theta)$.
+    \item \textbf{MSE Consistency:} $\lim_{n\rightarrow\infty}E[T_n-\tau(\theta)]^2=0$. If MSE consistent, it is also simply consistent.
+    \item \textbf{Asymptotically Unbiased:} $\lim_{n\rightarrow\infty}E[T_n] = \tau(\theta)$.
+\end{itemize}
+
+
+% ==========================================
+% Section 3: Sufficient & Complete
+% ==========================================
+\section{Sufficient \& Complete Statistics}
+
+\subsection{Sufficient Statistics}
+\begin{itemize}
+    \item \textbf{Definition of Joint Sufficiency:} The conditional distribution of the sample given $S(\vec{x})$ is free of $\theta$: $f(\vec{x}|\vec{s}) = \frac{f(\vec{x};\vec{\theta})}{f_s(\vec{s};\vec{\theta})}$.
+    \item \textbf{Properties:} MLEs and Order Statistics are jointly sufficient. If $X_1...X_n$ is a random sample, the order statistics form a jointly sufficient set for $\theta$.
+\end{itemize}
+
+\begin{thmbox}[title=Rao-Blackwell Theorem]
+Let $T$ be an estimator with $E[T] = \tau(\theta)$. If $S$ is sufficient, then $T^* = E[T|S]$ is a function of $S$, is an unbiased estimator of $\tau(\theta)$, and $Var(T^*) \le Var(T)$.
+\end{thmbox}
+
+\subsection{Completeness \& UMVUE}
+\begin{itemize}
+    \item \textbf{Completeness:} A family is complete if $E[u(T)]=0$ for all $\theta \in \Omega \implies u(T) \equiv 0$.
+    \item \textbf{Lehmann-Scheffé Theorem:} If $S$ is a vector of jointly complete and sufficient statistics, and $T^*(S)$ is an unbiased estimator for $\tau(\theta)$, then $T^*$ is the unique UMVUE.
+\end{itemize}
+
+\begin{defbox}[title=Regular Exponential Class (REC) \& Basu's Theorem]
+\textbf{REC:} $f(x;\theta) = c(\theta)h(x)\exp[\sum_{j=1}^k q_j(\theta)p_j(x)]$. \\
+\textbf{Basu's Theorem:} If $S$ is a complete and sufficient statistic for $\theta$, and $T$ is an ancillary statistic whose distribution does not depend on $\theta$, then $T$ and $S$ are stochastically independent.
+\end{defbox}
+
+\textbf{Example (Normal Distribution):} For a sample from $N(\mu, \sigma^2)$, the joint PDF can be factored into $g(s_1,s_2;\mu,\sigma^2)h(x_1...x_n)$, showing $s_1=\sum x_i$ and $s_2=\sum x_i^2$ are jointly sufficient.
+
+
+% ==========================================
+% Section 4: Confidence Interval & Hypothesis Testing
+% ==========================================
+\section{Confidence Interval \& Hypothesis Testing}
+
+\subsection{Confidence Interval (CI)}
+\begin{itemize}
+    \item A $100\gamma\%$ confidence interval for $\theta$ is
+    $(L(X_1,\ldots,X_n), U(X_1,\ldots,X_n))$ such that
+    \[
+        P\!\left[
+            L(X_1,\ldots,X_n) \le \theta \le U(X_1,\ldots,X_n)
+        \right] = \gamma.
+    \]
+    \item \textbf{Pivotal Quantity:} $Q = q(X_1...X_n; \theta)$ is a pivotal quantity if its PDF does not depend on $\theta$ or any other unknown parameters.
+    \item \textbf{Examples:}
+    \begin{itemize}
+        \item For $N(\mu, \sigma^2)$, $\frac{\bar{X}_n - \mu}{S/\sqrt{n}} \sim t(n-1)$.
+        \item For $EXP(\theta)$, $\frac{2n\bar{X}_n}{\theta} \sim \chi^2(2n)$.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Hypothesis Testing}
+\begin{itemize}
+    \item \textbf{Errors:}
+    \begin{itemize}
+        \item Type I Error ($\alpha$, significance level): $\alpha = P[\text{Reject } H_0 | H_0 \text{ is true}] = P[|\bar{X}-\mu_0|>c | \mu=\mu_0]$.
+        \item Type II Error ($\beta$): $\beta = P[\text{Accept } H_0 | H_1 \text{ is true}]$.
+    \end{itemize}
+\end{itemize}
+
+\begin{thmbox}[title=Most Powerful Test \& Neyman-Pearson]
+\textbf{Neyman-Pearson Lemma:} For testing simple hypotheses, the most powerful test rejects $H_0$ in favor of $H_1$ if the likelihood ratio $\lambda = \frac{f(x;\theta_0)}{f(x;\theta_1)} \le k$.
+\end{thmbox}
+
+\begin{itemize}
+    \item \textbf{Likelihood Ratio Test (LRT):} For composite hypotheses, the generalized test statistic is $\lambda = \frac{\max_{\theta \in \Omega_0} f(\vec{x};\theta)}{\max_{\theta \in \Omega} f(\vec{x};\theta)}$.
+\end{itemize}
+
+\end{document}

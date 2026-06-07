@@ -32,7 +32,7 @@ Focus: probability, mathematical statistics, estimation, hypothesis testing, asy
 ## PTS1 - Probability Theory
 
 **My notes**
-- [Probability Theory cheatsheet (distribution)](clips1.pdf)
+- [Probability Theory cheatsheet (distribution)](PTS1.pdf)
 
 **Reader**
 - [Reader (probability foundations)](Readerpts1.pdf)
@@ -50,10 +50,7 @@ Focus: probability, mathematical statistics, estimation, hypothesis testing, asy
 ## PTS2 - Multivariate Distribution and Estimations
 
 **My notes**
-- [chapter 5 Multivariate Distribution](5_multivariate_distribution.pdf)
-- [chapter 6 Functions of Multivariate Random Variables](6_Functions_Of_Multivariate_RV.pdf)
-- [chapter 7 Estimation](7_estimation.pdf)
-- [chapter 8 Hypothesis Testing](8_hypothesis_testing.pdf)
+- [PTS2 Notes](PTS2.pdf)
 
 **Reader**
 - [Reader (Multivariate Distribution and Estimations)](PTS2_reader.pdf)
@@ -67,10 +64,7 @@ Focus: probability, mathematical statistics, estimation, hypothesis testing, asy
 ---
 ## PTS3 - Mathematical Statistics
 **My notes**
-- [Limiting Distribution](limiting_distribution.pdf)
-- [Point Estimation](Point_Estimation.pdf)
-- [Sufficiency and Completeness](S&C.pdf)
-- [Confidence Interval and Hypothesis Testing](CIHT.pdf)
+- [Mathematical Statistics Notes](PTS3.pdf)
 
 **Reader**
 - [Reader (Mathematical Statistics)](PTS3_reader.pdf)

@@ -1,0 +1,306 @@
+\documentclass[12pt,a4paper]{article}
+
+% ====== Packages ======
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+
+% ====== Colors Setup ======
+\definecolor{mainblue}{RGB}{41, 128, 185}
+\definecolor{maingreen}{RGB}{39, 174, 96}
+\definecolor{mainred}{RGB}{192, 57, 43}
+\definecolor{bgblue}{RGB}{235, 245, 251}
+\definecolor{bggreen}{RGB}{233, 247, 239}
+\definecolor{bgred}{RGB}{253, 237, 236}
+
+% ====== TColorBox Environments ======
+\newtcolorbox{defbox}[1][]{
+    colback=bgblue,
+    colframe=mainblue,
+    fonttitle=\bfseries,
+    boxrule=1pt,
+    arc=4pt,
+    enhanced,
+    drop shadow,
+    #1
+}
+
+\newtcolorbox{thmbox}[1][]{
+    colback=bggreen,
+    colframe=maingreen,
+    fonttitle=\bfseries,
+    boxrule=1pt,
+    arc=4pt,
+    enhanced,
+    drop shadow,
+    #1
+}
+
+\newtcolorbox{notebox}[1][]{
+    colback=bgred,
+    colframe=mainred,
+    fonttitle=\bfseries,
+    boxrule=1pt,
+    arc=4pt,
+    enhanced,
+    drop shadow,
+    #1
+}
+
+\title{\textbf{\color{mainblue} Probability and Statistics II Notes}}
+\author{Zhiyao (Rachel) Lei}
+\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% Set section counter to start from 5 to match the notes chapters
+\setcounter{section}{4}
+
+% ==========================================
+% Section 5: Multivariate Distribution
+% ==========================================
+\section{Multivariate Distribution}
+
+\subsection{Joint Distributions}
+\begin{itemize}
+    \item \textbf{Discrete:} The joint probability mass function is
+    \[
+        p_{X,Y}(x,y)=P(X=x,Y=y).
+    \]
+    The marginal PMF and joint CDF are
+    \[
+        p_X(x)=\sum_y p_{X,Y}(x,y),
+        \qquad
+        F_{X,Y}(x,y)=P(X\le x,Y\le y).
+    \]
+    \item \textbf{Continuous:} A joint density satisfies
+    \[
+        \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+        f_{X,Y}(x,y)\,dy\,dx=1.
+    \]
+    Its marginal density is
+    \[
+        f_X(x)=\int_{-\infty}^{\infty}f_{X,Y}(x,y)\,dy.
+    \]
+\end{itemize}
+
+\subsection{Expectation, Covariance, and Independence}
+\begin{itemize}
+    \item \textbf{Expected values:}
+    \[
+        E[g(X,Y)]
+        =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+        g(x,y)f_{X,Y}(x,y)\,dy\,dx.
+    \]
+    Linearity gives $E[aX+bY+c]=aE[X]+bE[Y]+c$.
+    \item \textbf{Independence:} Random variables $X$ and $Y$ are independent if
+    \[
+        f_{X,Y}(x,y)=f_X(x)f_Y(y)
+        \qquad\text{for all }x,y.
+    \]
+    Independence implies
+    \[
+        E[g(X)h(Y)]=E[g(X)]E[h(Y)]
+    \]
+    whenever the expectations exist. It also implies
+    \[
+        \operatorname{Var}(X+Y)
+        =\operatorname{Var}(X)+\operatorname{Var}(Y).
+    \]
+    \item \textbf{Covariance:}
+    \[
+        \operatorname{Cov}(X,Y)
+        =E[(X-\mu_X)(Y-\mu_Y)]
+        =E[XY]-E[X]E[Y].
+    \]
+    \item \textbf{Correlation coefficient:}
+    \[
+        \rho_{X,Y}
+        =\frac{\operatorname{Cov}(X,Y)}{\sigma_X\sigma_Y},
+        \qquad \sigma_X,\sigma_Y>0.
+    \]
+\end{itemize}
+
+\begin{defbox}[title=Conditional Distributions]
+The conditional density of $Y$ given $X=x$ is
+\[
+    f_{Y\mid X}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}
+\]
+for values of $x$ such that $f_X(x)>0$. The conditional variance is
+\[
+    \operatorname{Var}(Y\mid X=x)
+    =E(Y^2\mid X=x)-[E(Y\mid X=x)]^2.
+\]
+\end{defbox}
+
+
+% ==========================================
+% Section 6: Functions of Multivariate Random Variables
+% ==========================================
+\section{Functions of Multivariate Random Variables}
+
+\subsection{Transformation Methods}
+\begin{itemize}
+    \item \textbf{CDF method:} For $W=h(X,Y)$,
+    \[
+        F_W(w)=P(h(X,Y)\le w)
+        =\iint_{\{(x,y):\,h(x,y)\le w\}}
+        f_{X,Y}(x,y)\,dx\,dy.
+    \]
+    \item \textbf{Jacobian method:} Let $(U,V)=T(X,Y)$ be one-to-one,
+    with inverse $(X,Y)=T^{-1}(U,V)$. Then
+    \[
+        f_{U,V}(u,v)
+        =f_{X,Y}\!\left(x(u,v),y(u,v)\right)
+        \left|
+            \frac{\partial(x,y)}{\partial(u,v)}
+        \right|.
+    \]
+    \item \textbf{MGF method:} The joint moment-generating function is
+    \[
+        M_{U,V}(t_1,t_2)=E\!\left[e^{t_1U+t_2V}\right],
+    \]
+    when it exists in a neighborhood of $(0,0)$.
+\end{itemize}
+
+\subsection{Distributions of Sums \& Sample Statistics}
+\begin{itemize}
+    \item \textbf{Sums:}
+    \[
+        E\!\left[\sum_{i=1}^kX_i\right]
+        =\sum_{i=1}^kE[X_i].
+    \]
+    If the variables are independent, then
+    \[
+        \operatorname{Var}\!\left(\sum_{i=1}^kX_i\right)
+        =\sum_{i=1}^k\operatorname{Var}(X_i).
+    \]
+    \item \textbf{Convolution formula:} If $X$ and $Y$ are independent and
+    $S=X+Y$, then
+    \[
+        f_S(s)=\int_{-\infty}^{\infty}f_X(x)f_Y(s-x)\,dx.
+    \]
+\end{itemize}
+
+\begin{thmbox}[title=Sample Distributions and Order Statistics]
+\textbf{Sample Statistics:} 
+\begin{itemize}
+    \item Sample mean:
+    $\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$, with
+    $E[\bar{X}]=\mu$ and $\operatorname{Var}(\bar{X})=\sigma^2/n$.
+    \item Sample variance:
+    $S^2=\frac{1}{n-1}\sum_{i=1}^n(X_i-\bar{X})^2$.
+\end{itemize}
+\textbf{Order statistics:} Write
+$X_{(1)}=\min(X_1,\ldots,X_n)$ and
+$X_{(n)}=\max(X_1,\ldots,X_n)$. For an i.i.d.\ continuous sample, the density
+of the $k$-th order statistic is
+\[
+    f_{X_{(k)}}(x)
+    =\frac{n!}{(k-1)!(n-k)!}
+    [F(x)]^{k-1}[1-F(x)]^{n-k}f(x).
+\]
+\end{thmbox}
+
+
+% ==========================================
+% Section 7: Estimation
+% ==========================================
+\section{Estimation}
+
+\subsection{Point Estimation}
+\begin{itemize}
+    \item A point estimator is a statistic used to estimate an unknown
+    population parameter.
+    \item The sample variance $S^2$ is an unbiased estimator of $\sigma^2$:
+    $E[S^2]=\sigma^2$.
+    \item If $X\sim\operatorname{Binomial}(n,p)$, then
+    $\hat{p}=X/n$ satisfies
+    \[
+        E[\hat{p}]=p,
+        \qquad
+        \operatorname{Var}(\hat{p})=\frac{p(1-p)}{n}.
+    \]
+\end{itemize}
+
+\subsection{Confidence Intervals (CI)}
+\begin{defbox}[title={$100(1-\alpha)\%$ Confidence Intervals}]
+\textbf{For a single population:}
+\begin{itemize}
+    \item \textbf{$\mu$ ($\sigma$ known):}
+    $\bar{X}\pm z_{1-\alpha/2}\frac{\sigma}{\sqrt{n}}$.
+    \item \textbf{$\mu$ ($\sigma$ unknown, normal population):}
+    $\bar{X}\pm t_{1-\alpha/2,n-1}\frac{S}{\sqrt{n}}$.
+    \item \textbf{Proportion $p$ (large sample):}
+    $\hat{p}\pm z_{1-\alpha/2}
+    \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$.
+    \item \textbf{Variance $\sigma^2$ (normal population):}
+    \[
+        \left[
+            \frac{(n-1)S^2}{\chi^2_{1-\alpha/2,n-1}},
+            \frac{(n-1)S^2}{\chi^2_{\alpha/2,n-1}}
+        \right].
+    \]
+\end{itemize}
+\end{defbox}
+
+
+% ==========================================
+% Section 8: Hypothesis Testing
+% ==========================================
+\section{Hypothesis Testing}
+
+\subsection{Fundamental Concepts}
+\begin{itemize}
+    \item \textbf{Steps:} Formulate $H_0$ and $H_1$, choose a test statistic,
+    verify the assumptions, select a significance level, and determine the
+    rejection region or p-value.
+    \item \textbf{Errors and power:}
+        \begin{itemize}
+            \item Type I error:
+            $P(\text{reject }H_0\mid H_0\text{ is true})=\alpha$.
+            \item Type II error:
+            $P(\text{fail to reject }H_0\mid H_0\text{ is false})=\beta$.
+            \item Power:
+            $P(\text{reject }H_0\mid H_0\text{ is false})=1-\beta$.
+        \end{itemize}
+    \item \textbf{p-value:} Under $H_0$, the p-value is the probability of a
+    test statistic at least as extreme as the observed value. Reject $H_0$
+    when the p-value is at most $\alpha$.
+\end{itemize}
+
+\begin{thmbox}[title=Tests for One and Two Populations]
+\textbf{Single Population Tests:}
+\begin{itemize}
+    \item For $\mu$ ($\sigma$ known):
+    $Z=\frac{\bar{X}-\mu_0}{\sigma/\sqrt{n}}\sim N(0,1)$ under $H_0$.
+    \item For $\mu$ ($\sigma$ unknown, normal population):
+    $T=\frac{\bar{X}-\mu_0}{S/\sqrt{n}}\sim t_{n-1}$ under $H_0$.
+    \item For $p$ (large sample):
+    $Z=\frac{\hat{p}-p_0}{\sqrt{p_0(1-p_0)/n}}
+    \mathrel{\dot{\sim}}N(0,1)$ under $H_0$.
+\end{itemize}
+\textbf{Two Population Tests:}
+\begin{itemize}
+    \item Difference in means with known variances:
+    \[
+        Z=\frac{\bar{X}_1-\bar{X}_2-\Delta_0}
+        {\sqrt{\sigma_1^2/n_1+\sigma_2^2/n_2}}.
+    \]
+    \item Ratio of variances for independent normal samples:
+    \[
+        F=\frac{S_1^2/\sigma_1^2}{S_2^2/\sigma_2^2}
+        \sim F_{n_1-1,n_2-1}.
+    \]
+\end{itemize}
+\end{thmbox}
+
+\end{document}

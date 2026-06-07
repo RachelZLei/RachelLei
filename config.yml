@@ -17,8 +17,8 @@ menu:
           url: projects/
           weight: 1
 
-        - name: Writing
-          url: blog/
+        - name: Courses
+          url: courses/
           weight: 2
 
         - name: GitHub
@@ -46,7 +46,7 @@ params:
   ShowCodeCopyButtons: true
   ShowPageCards: true
   ShowAllPagesInArchive: false
-  MainSections: ["projects","blog"]
+  MainSections: ["projects","courses"]
   ShowToc: false
   disableScrollToTop: true
   TocOpen: true
@@ -75,8 +75,8 @@ params:
     buttons:
       - name: Projects
         url: projects/
-      - name: Writing
-        url: blog/
+      - name: Courses
+        url: courses/
       - name: CV
         url: cv.pdf
 
